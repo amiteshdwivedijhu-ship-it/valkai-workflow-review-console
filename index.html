@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Valkai Unified Interface prototype: a Life Sciences Workflow Review Console where a regulatory writer or safety reviewer puts agent-drafted deliverables through a human gate and sees days saved.">
+  <title>Valkai · Unified Interface — Workflow Review</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="mark" aria-hidden="true">V</span>
+    <div class="brand-text">
+      <span class="brand-name">Valkai</span>
+      <span class="brand-sub">Unified Interface</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span class="pill pill-neutral pill-sm">Demo · synthetic data</span>
+  </div>
+</header>
+
+<main>
+  <!-- Workflow queue -->
+  <section class="card queue" aria-label="Active agent workflows">
+    <div class="section-head">
+      <h2>Workflow queue</h2>
+      <span class="meta" id="queue-count">3 active</span>
+    </div>
+    <div id="queue"></div>
+  </section>
+
+  <!-- Active workflow stub -->
+  <section class="card case-head" id="case-head"></section>
+
+  <!-- Draft packet -->
+  <section class="card packet" id="packet">
+    <div class="section-head">
+      <h2>Review-ready draft</h2>
+      <span class="meta" id="packet-meta"></span>
+    </div>
+    <div id="draft-sections"></div>
+  </section>
+
+  <!-- Cited sources -->
+  <section class="card sources" id="sources">
+    <div class="section-head">
+      <h2>Cited sources</h2>
+      <span class="meta">Line-by-line citations</span>
+    </div>
+    <div id="source-rows"></div>
+  </section>
+
+  <!-- Human gate -->
+  <section class="card gate" id="gate"></section>
+
+  <!-- Impact -->
+  <section class="card impact" id="impact"></section>
+</main>
+
+<footer class="foot">
+  <p>Working prototype for the Valkai Product Manager brief. Stubbed source systems only; no live SOP, EDMS, or trial systems. No real patient or filing data.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
